@@ -44,27 +44,20 @@
         <style>
             body {background-image: url(assets/img/Background.jpg);}
         </style>
-        
-        <div class="loginContainer"> 
-            <form class="form" id="login">
-                <h1 class="form__title">Login</h1>
+        </br>
+        <div class="forgotContainer"> 
+            <form class="form" id="forgotPassword">
+               
+                <h2 style="text-align: center;">Forgot your Password?</h2>
+                </br>
                 <div class="form__message form__message--error"></div>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Username or email">
+                    <input type="text" class="form__input" autofocus placeholder="email">
                     <div class="form__input-error-message"></div>
                 </div>
-                <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
-                    <div class="form__input-error-message"></div>
-                </div>
+                 </br>
                 <button class="form__button" type="submit">Continue</button>
-                <p></p>
-                <p class="form__text">
-                    <a href="#" class="form__link">Forgot your password?</a>
-                </p>
-                <p class="form__text">
-                    <a class="form__link" href="signup" id="linkCreateAccount">Don't have an account? Create account</a>
-                </p>
+               </br>
             </form>
         </div>
         

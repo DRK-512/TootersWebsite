@@ -60,7 +60,7 @@
                 <button class="form__button" type="submit">Continue</button>
                 <p></p>
                 <p class="form__text">
-                    <a href="#" class="form__link">Forgot your password?</a>
+                    <a href="forgotPassword" class="form__link">Forgot your password?</a>
                 </p>
                 <p class="form__text">
                     <a class="form__link" href="signup" id="linkCreateAccount">Don't have an account? Create account</a>

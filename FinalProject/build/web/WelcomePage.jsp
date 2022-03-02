@@ -5,7 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.GregorianCalendar"%>
+    
 <!DOCTYPE html>
 <html lang="en>
     <head>
@@ -134,7 +136,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/ApolloJones.png" alt="Apollo Jones"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Hi, I'm Mr. Jones, but you can call me Apollo. I was a high school history teacher for 8 years teaching US Government, US History, World History, and European History, but now I tutor students online because I think sitting down with students one-on-one is the best way for them to learn!</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -161,7 +163,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/MariaGarcia.png" alt="Maria Garcia"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">high school spanish and english teacher</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -188,7 +190,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/JohnnyDoe.png" alt="Johnny Doe"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Elementary math and science</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -215,7 +217,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/SaaviAcharya.png" alt="Saavi Acharya"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">high school math</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -242,7 +244,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/LevyJohnston.png" alt="Levy Johnston"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">elementary and middle school social studies</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -269,7 +271,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/JannetPark.png" alt="Jannet Park"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">elementary english</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -347,14 +349,20 @@ Sterling Heights, MI 48313</p>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
                         <h4 class="mb-4">WANT THE GITHUB REPOSITORY?</h4>
-                        <p class="pre-wrap lead mb-0"> <a href="https://github.com/DRK-512/CS-341/tree/main/FinalProject">Click Here!</a> to download the sites source code!</p>
+                        <p class="pre-wrap lead mb-0"> <a href="https://github.com/DRK-512/TootersWebsite">Click Here!</a> to download the sites source code!</p>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
         <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright © Tooters 2022</small></div>
+            <div class="container">
+                <small class="pre-wrap">Copyright © Tooters <%
+                    GregorianCalendar cal = new GregorianCalendar();
+                    out.print(cal.get(Calendar.YEAR));
+                %>
+                </small>
+            </div>
         </section>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
