@@ -21,6 +21,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         
         <link href="css/styles.css" type="text/css" rel="stylesheet">
+        
 
         <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
