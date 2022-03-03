@@ -146,6 +146,7 @@
                 </div>
             </div>
         </div>
+                                    <p class="mb-5">
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -164,7 +165,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/MariaGarcia.png" alt="Maria Garcia"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">high school spanish and english teacher</p>
+                                    <p class="mb-5">Hi I am Señora Garia! and I am here to help you pasar Español!!! I grew up speaking Spanish, so when I became a teacher I knew I had to teach others the beauty of the language.</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -191,7 +192,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/JohnnyDoe.png" alt="Johnny Doe"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Elementary math and science</p>
+                                    <p class="mb-5">Teaching is a rewarding experience, and I teach so I can learn about the world and all of the infinite possibilities is brings! If you need help with science, Mr. Doe is the tooter for you! </p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -218,7 +219,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/SaaviAcharya.png" alt="Saavi Acharya"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">high school math</p>
+                                    <p class="mb-5">Hi I am Mrs. Acharya, and I love solving problems. Math is everywhere around us, and that is why I love teaching it. I have taught it for 12 years now, and I can't wait to teach it for another 12!</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -245,7 +246,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/LevyJohnston.png" alt="Levy Johnston"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">elementary and middle school social studies</p>
+                                    <p class="mb-5">My students call me Mr.Johnston, but you can call me Levy. The world around us is full of great ideas, but we need to find them. That is why I teach history! To remind people what tools we can learn from and how we can use them today</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -272,7 +273,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/characters/JannetPark.png" alt="Jannet Park"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">elementary english</p>
+                                    <p class="mb-5">Mrs. Park here to teach you perfect grammar. I love reading and writing so much I have taught it for 7 years now! I do write my own books on my free time, and hope to push you to write your own as well.</p>
                                     <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
