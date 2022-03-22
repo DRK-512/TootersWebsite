@@ -48,18 +48,23 @@
         </style>
         
         <div class="loginContainer"> 
-            <form class="form" id="login">
+            <!-- METHOD POST IS VITAL SO WE DONT SHOW PARAMETERS IN URL!!!!!!!!! -->
+            <form action="login" method="post">
+                <img src="assets/img/BlueNWhiteTootokSmall.png" alt="Tooto"/>
+                  
                 <h1 class="form__title">Login</h1>
-                <div class="form__message form__message--error"></div>
+                <div class="form__message form__message--error">${message}</div>
+
+
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Username or email">
+                    <input type="text" class="form__input" autofocus placeholder="Username" name="uname" >
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <input type="password" class="form__input" autofocus placeholder="Password" name="pwd">
                     <div class="form__input-error-message"></div>
                 </div>
-                <button class="form__button" type="submit">Continue</button>
+                <button class="form__button" action='submit' >Continue</button>
                 <p></p>
                 <p class="form__text">
                     <a href="forgotPassword" class="form__link">Forgot your password?</a>

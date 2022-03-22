@@ -11,7 +11,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -74,29 +73,10 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
         
-        String userName = request.getParameter("uname"); 
-        String passWord = request.getParameter("pwd"); 
-        UserDatabase myDatabase = new UserDatabase(); 
-        
-        /*
-        if(!myDatabase.CheckUserExists(userName, passWord))
-        {
-            HttpSession mySession = request.getSession(); 
-            mySession.invalidate(); 
-            
-            String RedirectURL = "/login.jsp";
-            String message = "Username or password are inncorrect, please enter valid login"; 
-            ServletCommonUtility myUtility = new ServletCommonUtility(); 
-            myUtility.RedirectUtility(request, response, RedirectURL, message);
-            return; 
-        }*/
-       
-        HttpSession userLoginSession = request.getSession(); 
         
         String RedirectURL = "/WelcomePage.jsp"; 
-        String message = "Logged in User " + userLoginSession.getId(); 
+        String message = ""; 
         
         ServletCommonUtility myUtility = new ServletCommonUtility(); 
         myUtility.RedirectUtility(request, response, RedirectURL, message);

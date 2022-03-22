@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -34,15 +35,7 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           
         }
     }
 
@@ -58,8 +51,8 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        doPost(request, response); 
+           doPost(request, response); 
+        
     }
 
     /**
@@ -73,29 +66,42 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+                
         String userName = request.getParameter("uname"); 
-        String passWord = request.getParameter("pwd"); 
+        String pwd = request.getParameter("pwd"); 
+        
         UserDatabase myDatabase = new UserDatabase(); 
-        /*
-        if(!myDatabase.CheckUserExists(userName, passWord))
-        {
-            HttpSession mySession = request.getSession(); 
-            mySession.invalidate(); 
+        String message=""; 
+        
+        if(!myDatabase.CheckUserExists(userName, pwd)){
             
-            String RedirectURL = "/login.jsp";
-            String message = "Username or password are inncorrect, please enter valid login"; 
-            ServletCommonUtility myUtility = new ServletCommonUtility(); 
+           HttpSession mySession = request.getSession(); 
+           mySession.invalidate(); 
+           
+           if(userName!=null){
+               message = "Invalid Username or Password"; 
+           }
+            
+            String RedirectURL = "/Login.jsp";
+            
+            ServletCommonUtility myUtility = new ServletCommonUtility();
             myUtility.RedirectUtility(request, response, RedirectURL, message);
             return; 
-        }*/
-       
-        HttpSession userLoginSession = request.getSession(); 
+            
+        }
+
+        String RedirectURL = "/Userhome.jsp";
         
-        String RedirectURL = "/Login.jsp"; 
-        String message = "Logged in User " + userLoginSession.getId(); 
+        // Now we set the username as 
+        Cookie c = new Cookie("userName", userName); 
+        c.setMaxAge(60*60*24*365*2); // set age to 2 years
+        c.setPath("/"); // allow access by entire app
+        response.addCookie(c); 
         
-        ServletCommonUtility myUtility = new ServletCommonUtility(); 
+        message = userName.toUpperCase(); 
+        ServletCommonUtility myUtility = new ServletCommonUtility();
         myUtility.RedirectUtility(request, response, RedirectURL, message);
+        
     }
 
     /**

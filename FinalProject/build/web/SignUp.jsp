@@ -1,3 +1,8 @@
+
+
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,8 +24,7 @@
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
         
-         <!-- javascript file -->
-        <script src="js/scripts.js" type="text/javascript"></script>
+      
         
     </head>
     <body id="page-top"style="height:1000px;">
@@ -44,38 +48,36 @@
         </style>
         
         <div class="loginContainer"> 
-            <form class="form" id="createAccount">
+              <!-- METHOD POST IS VITAL SO WE DONT SHOW PARAMETERS IN URL!!!!!!!!! -->
+            <form class="form" id="createAccount" method="post">
                 
-                <h2 class="form__title">Account Type</h2>
-                    <p></p>    
-                <p class="form__text">
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" checked> Tooter
-                    </label>
-                    
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio"> Student
-                    </label>
-                </p>
-                
-                
+                <img src="assets/img/BlueNWhiteTootokSmall.png" alt="Tooto"/>
+
                 <h1 class="form__title">Create Account</h1>
-                
+                <div class="form__message form__message--error">${message}</div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="First Name" name="fname"required>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Last Name" name="lname"required>
+                    <div class="form__input-error-message"></div>
+                </div>
                 <div class="form__message form__message--error"></div>
                 <div class="form__input-group">
-                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                    <input type="text" class="form__input" autofocus placeholder="Username" name="uname"required>
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Email Address">
+                    <input type="email" class="form__input" autofocus placeholder="Email Address" name="email"required>
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <input type="password" class="form__input" autofocus placeholder="Password" name="pwd"required>
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                    <input type="password" class="form__input" autofocus placeholder="Confirm password" name="cpwd"required>
                     <div class="form__input-error-message"></div>
                 </div>
                 <button class="form__button" type="submit">Continue</button>

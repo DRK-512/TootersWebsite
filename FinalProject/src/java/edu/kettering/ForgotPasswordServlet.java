@@ -59,7 +59,6 @@ public class ForgotPasswordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
         doPost(request, response); 
     }
 
@@ -74,24 +73,8 @@ public class ForgotPasswordServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
         
-        String userName = request.getParameter("uname"); 
-        String passWord = request.getParameter("pwd"); 
-        UserDatabase myDatabase = new UserDatabase(); 
-        
-        /*
-        if(!myDatabase.CheckUserExists(userName, passWord))
-        {
-            HttpSession mySession = request.getSession(); 
-            mySession.invalidate(); 
-            
-            String RedirectURL = "/login.jsp";
-            String message = "Username or password are inncorrect, please enter valid login"; 
-            ServletCommonUtility myUtility = new ServletCommonUtility(); 
-            myUtility.RedirectUtility(request, response, RedirectURL, message);
-            return; 
-        }*/
+        String email = request.getParameter("email"); 
        
         HttpSession userLoginSession = request.getSession(); 
         

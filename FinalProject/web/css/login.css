@@ -161,3 +161,8 @@ forgotContainer,
     font: 500 1rem 'Quicksand', sans-serif;
     
 }
+.form-image {
+    height:30px;
+    width: 30px;
+  }
+  

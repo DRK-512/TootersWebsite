@@ -282,12 +282,24 @@
                 </div>
             </div>
         </div>
-        <!-- <section class="page-section bg-primary text-white mb-0" id="about"> </section> --> 
+         <div class="text-center">
+             <a href="explore" class="btn btn-primary"  
+                style="padding-top: 30px;
+                       padding-right: 40px;
+                       padding-bottom: 30px;
+                       padding-left: 40px;">   
+                 <strong><h1>Explore our Tooters!</h1></strong>
+             </a>
+            </br>
+            </br>
+            </br>
+            </br>
+        </div> 
+                                    
+        <section class="page-section bg-primary text-white text-center mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
-                </div>
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -300,16 +312,17 @@
                         <p class="pre-wrap lead">TOOTERS is a  site where students or parents can freelance tutors to help with those troubling school subject. Students can purchase a single session with a tutor, or may discuss a study plan to meet weekly or daily. </p>
                     </div>
                     <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">This project was created by Darek and Karolina Konopka to provide an environment where teachers can easily find freelance work, and where students can easily find help with the subjects they need.  </p>
+                        <p class="pre-wrap lead">This project was created by Darek Konopka to provide an environment where teachers can easily find freelance work, and where students can easily find help with the subjects they need.  </p>
                     </div>
-                </div>
+                 </div>
             </div>
+        </section>
         
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">CONTACT</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
