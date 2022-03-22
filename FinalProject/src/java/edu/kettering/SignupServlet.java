@@ -21,26 +21,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet(name = "SignupServlet", urlPatterns = {"/signup"})
 public class SignupServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+   
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -52,7 +33,16 @@ public class SignupServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-           doPost(request, response); 
+        
+            String RedirectURL = "/SignUp.jsp";
+            String message = "";  
+        
+            // clears the cookies before we store into them
+            HttpSession mySession = request.getSession(); 
+            mySession.invalidate(); 
+            
+            ServletCommonUtility myUtility = new ServletCommonUtility(); 
+            myUtility.RedirectUtility(request, response, RedirectURL, message);
         
     }
 
@@ -67,7 +57,10 @@ public class SignupServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        /*
+        NOTE: if you add a collumn in the table, you must edit the create user code
+        so that it sets all parameters, including the one you just added int
+        */
         String userName = request.getParameter("uname"); 
         String passWord = request.getParameter("pwd"); 
         
